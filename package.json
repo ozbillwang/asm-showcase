@@ -1,0 +1,28 @@
+{
+  "name": "asm-showcase",
+  "version": "1.0.0",
+  "description": "A showcase on how to get secrets with AWS Secrets manager - nodejs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozbillwang/asm-showcase.git"
+  },
+  "keywords": [
+    "asm",
+    "aws",
+    "secrets",
+    "manager"
+  ],
+  "author": "Bill Wang",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ozbillwang/asm-showcase/issues"
+  },
+  "homepage": "https://github.com/ozbillwang/asm-showcase#readme",
+  "dependencies": {
+    "aws-sdk": "^2.245.1"
+  }
+}
