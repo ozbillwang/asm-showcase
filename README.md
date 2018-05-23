@@ -3,7 +3,11 @@ A showcase on how to get secrets with AWS Secrets manager - nodejs
 
 ### Usage
 
-After created the secrets in aws secrets manager, you can run this script to get the secrets.
+Create the secrets in aws secrets manager
+
+![asm](asm.png)
+
+Run this script to get the secrets.
 
 ```
 $ TEAM=fbi PROJECT=secrets ENVIRONMENT=prod node main.js
