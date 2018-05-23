@@ -10,6 +10,8 @@ Create the secrets in aws secrets manager
 Run this script to get the secrets.
 
 ```
+$ npm install
+
 $ TEAM=fbi PROJECT=secrets ENVIRONMENT=prod node main.js
 fbi/secrets/prod
 { env: 'prod', foo: 'rab' }
