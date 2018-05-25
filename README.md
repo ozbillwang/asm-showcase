@@ -7,7 +7,10 @@
     - [Create the secrets in aws secrets manager console](#create-the-secrets-in-aws-secrets-manager-console)
     - [Create the secrets with aws cli](#create-the-secrets-with-aws-cli)
       - [Create secrets:](#create-secrets)
-      - [Get secrets:](#get-secrets)
+      - [Get secret:](#get-secret)
+      - [Update a secret](#update-a-secret)
+      - [Show current version](#show-current-version)
+      - [Show previous version](#show-previous-version)
     - [Retrieve the secret in your application.](#retrieve-the-secret-in-your-application)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -29,9 +32,25 @@ A showcase on how to get secrets with AWS Secrets manager - nodejs
 aws secretsmanager create-secret --name "fbi/secrets/dev" --secret-string file://dev.json
 ```
 
-#### Get secrets:
+#### Get secret:
 ```
 aws secretsmanager get-secret-value --secret-id "fbi/secrets/dev"
+```
+
+#### Update a secret 
+
+```
+# update dev.json
+$ aws secretsmanager put-secret-value --secret-id "fbi/secrets/dev" --secret-string file://dev.json |jq -r .SecretString
+```
+
+#### Show current version
+```
+$ aws secretsmanager get-secret-value --secret-id "fbi/secrets/dev" --version-stage AWSCURRENT |jq -r .SecretString
+```
+#### Show previous version
+```
+$ aws secretsmanager get-secret-value --secret-id "fbi/secrets/dev" --version-stage AWSPREVIOUS |jq -r .SecretString
 ```
 
 ### Retrieve the secret in your application.
