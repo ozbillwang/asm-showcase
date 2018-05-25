@@ -22,7 +22,7 @@ A showcase on how to get secrets with AWS Secrets manager - nodejs
 
 ### Create the secrets in aws secrets manager console
 
-![asm](asm.png)
+![asm](docs/asm.png)
 
 ### Create the secrets with aws cli
 
